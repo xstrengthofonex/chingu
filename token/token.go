@@ -8,6 +8,7 @@ const (
 	EOF Kind = iota
 	LPAREN
 	RPAREN
+	DOT
 	PLUS
 	MINUS
 	STAR
@@ -19,6 +20,7 @@ var kindNames = map[Kind]string{
 	EOF: "EOF",
 	LPAREN: "LPAREN",
 	RPAREN: "RPAREN",
+	DOT: "DOT",
 	PLUS: "PLUS",
 	MINUS: "MINUS",
 	STAR: "STAR",

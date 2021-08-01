@@ -39,6 +39,8 @@ func (s *Scanner) Scan() token.Token {
 		return token.New(token.LPAREN, "(")
 	case ')':
 		return token.New(token.RPAREN, ")")
+	case '.':
+		return token.New(token.DOT, ".")
 	case '+':
 		return token.New(token.PLUS, "+")
 	case '-':

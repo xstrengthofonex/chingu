@@ -10,6 +10,7 @@ import (
 var tokens = []token.Token{
 	token.New(token.LPAREN, "("),
 	token.New(token.RPAREN, ")"),
+	token.New(token.DOT, "."),
 	token.New(token.PLUS, "+"),
 	token.New(token.MINUS, "-"),
 	token.New(token.STAR, "*"),
