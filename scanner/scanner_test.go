@@ -1,19 +1,27 @@
 package scanner
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/xstrengthofonex/chingu/token"
 )
 
 var tokens = []token.Token{
+	token.New(token.LPAREN, "("),
+	token.New(token.RPAREN, ")"),
+	token.New(token.PLUS, "+"),
+	token.New(token.MINUS, "-"),
+	token.New(token.STAR, "*"),
+	token.New(token.SLASH, "/"),
+	token.New(token.TICK, "`"),
 	token.EndOfFile(),
 }
 
 func TestScan(t *testing.T) {
 	src := ""
 	for _, tok := range tokens {
-		src += tok.Literal 
+		src += fmt.Sprintf(" \t%s\n", tok.Literal) 
 	}
 
 	scanner := New(src)

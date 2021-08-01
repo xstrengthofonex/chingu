@@ -6,10 +6,24 @@ type Kind int
 
 const (
 	EOF Kind = iota
+	LPAREN
+	RPAREN
+	PLUS
+	MINUS
+	STAR
+	SLASH
+	TICK
 )
 
 var kindNames = map[Kind]string{
 	EOF: "EOF",
+	LPAREN: "LPAREN",
+	RPAREN: "RPAREN",
+	PLUS: "PLUS",
+	MINUS: "MINUS",
+	STAR: "STAR",
+	SLASH: "SLASH",
+	TICK: "TICK",
 }
 
 func (k Kind) String() string {
@@ -33,5 +47,5 @@ func EndOfFile() Token {
 }
 
 func (t Token) String() string {
-	return fmt.Sprintf("Tokens{Kind: %s, Literal: %q}", t.Kind, t.Literal)
+	return fmt.Sprintf("Token{Kind: %s, Literal: %q}", t.Kind, t.Literal)
 }
