@@ -63,7 +63,11 @@ func (s *Scanner) Scan() token.Token {
 			for isSubsequentIdent(s.peek()) {
 				s.advance()
 			}
-			return token.New(token.IDENT, s.src[s.start:s.pos])
+			v := s.src[s.start:s.pos]
+			if k, ok := token.Keywords[v]; ok {
+				return token.New(k, v)
+			}
+			return token.New(token.IDENT, v)
 		} else {
 			return token.New(token.BAD, s.src[s.start:s.pos])
 		}

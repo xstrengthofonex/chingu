@@ -15,6 +15,7 @@ const (
 	SLASH
 	TICK
 	IDENT
+	FN 
 	BAD
 )
 
@@ -29,6 +30,7 @@ var kindNames = map[Kind]string{
 	SLASH: "SLASH",
 	TICK: "TICK",
 	IDENT: "IDENT",
+	FN: "FN",
 	BAD: "BAD",
 }
 
@@ -37,6 +39,10 @@ func (k Kind) String() string {
 		return s
 	}
 	return "INVALID"
+}
+
+var Keywords = map[string]Kind {
+	"fn": FN,
 }
 
 type Token struct {

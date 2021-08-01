@@ -21,6 +21,7 @@ var tokens = []token.Token{
 	token.New(token.IDENT, "bar"),
 	token.New(token.IDENT, "foo_bar2"),
 	token.New(token.IDENT, "_foo_bar2"),
+	token.New(token.FN, "fn"),
 	token.EndOfFile(),
 }
 
