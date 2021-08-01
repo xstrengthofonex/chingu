@@ -16,6 +16,11 @@ var tokens = []token.Token{
 	token.New(token.STAR, "*"),
 	token.New(token.SLASH, "/"),
 	token.New(token.TICK, "`"),
+	token.New(token.IDENT, "a"),
+	token.New(token.IDENT, "foo"),
+	token.New(token.IDENT, "bar"),
+	token.New(token.IDENT, "foo_bar2"),
+	token.New(token.IDENT, "_foo_bar2"),
 	token.EndOfFile(),
 }
 

@@ -14,6 +14,8 @@ const (
 	STAR
 	SLASH
 	TICK
+	IDENT
+	BAD
 )
 
 var kindNames = map[Kind]string{
@@ -26,6 +28,8 @@ var kindNames = map[Kind]string{
 	STAR: "STAR",
 	SLASH: "SLASH",
 	TICK: "TICK",
+	IDENT: "IDENT",
+	BAD: "BAD",
 }
 
 func (k Kind) String() string {
